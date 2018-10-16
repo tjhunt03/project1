@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  background-color: #314755;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-align: center;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+}
+
+h4 {
+  color: white;
+  display: inline;
+}
+
+h5 {
+  display: inline;
+  color: white;
+
+}
+
+body {
+  .container-fluid
+}
+
+.floatr {
+  float: right;
+}
+
+.floatlogin {
+  float: right;
+}

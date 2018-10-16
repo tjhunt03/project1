@@ -1,0 +1,21 @@
+
+  <%if flash[:errors].present? %>
+  <strong>Please correct the following errors in form:</strong>
+  <ol>
+    <% flash[:errors].each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ol>
+  <% end %>
+
+
+  <%= form_for @ideas do |f| %>
+      <%= f.label :idea_title %>
+      <%= f.text_field :idea_title %>
+      <br>
+      <%= f.label :idea_description %>
+      <%= f.text_field :idea_description %>
+      <br>
+      <br>
+      <%= f.submit %>
+    <% end %>

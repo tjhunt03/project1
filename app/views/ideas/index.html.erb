@@ -1,0 +1,21 @@
+
+<hr>
+<%if @current_user.present? %>
+  <%= link_to 'Create New idea', new_idea_path  %>
+
+  <% end %>
+  <h2>Browse start up ideas</h2>
+
+
+<ul>
+<% @ideas.each do |idea| %>
+<li>
+
+
+
+  <a href="<%= idea_path(idea.id)  %>">
+      <%= idea.idea_title %>
+</li>
+
+<% end %>
+</ul>

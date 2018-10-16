@@ -1,0 +1,39 @@
+
+<hr>
+<% if @current_user.present? && @idea.user == @current_user %>|
+
+  <%= link_to 'Edit Your idea',edit_idea_path  %> |
+  <%= link_to 'Create New idea', new_idea_path  %> |
+  <%= link_to 'Delete this Idea', idea_path(@idea), method: 'delete' %>
+
+<% end %>
+
+<hr>
+<br>
+<h2>Startup Ideas by @username </h2>
+
+
+ <h5>Title: </h5><%= @idea.idea_title %> <br>
+
+<h5>Description:  </h3><%= @idea.idea_description %>
+
+
+
+<hr>
+
+<h3>Comment Section:</h3>
+</ul>
+<% @idea.comments.each do |comment| %>
+  <li><%= comment.body %></li>
+</ul>
+<% end %>
+<br>
+<br>
+<%= form_tag comments_path do  %>
+    <%= label_tag :body %>
+    <%= text_field_tag :body %>
+    <%= hidden_field_tag :idea_id,"#{@idea.id}" %>
+    <br>
+
+    <%= submit_tag "submit"%>
+  <% end %>

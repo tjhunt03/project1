@@ -1,0 +1,28 @@
+
+  <h2>Create New Account</h2>
+
+  <%if flash[:errors].present? %>
+  <strong>Please correct the following errors</strong>
+  <ol>
+  <%= flash[:errors].each do |e| %>
+  <li><%= e %></li>
+  <% end %>
+  </ol>
+<% end %>
+    <%= form_for @user do |f| %>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_conirmation%>
+    <br>
+    <%= f.submit %>
+
+  <% end %>
