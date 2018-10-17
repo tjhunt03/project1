@@ -32,6 +32,13 @@ u2 = User.create username: 'place_kitten123', dob: "1993/12/12", job_title:"xbiz
 u3 = User.create username: 'Fillmurray995', dob: "1993/13/12", job_title:"xbiz@gmail.com", email: "chicken@gmail.com", capital_required: 12_000,  password: 'chicken'
 
 
+u4 = User.create username: 'xbiz2', dob: "1993/12/12", job_title:"xbi", email: "xbiz11@gmail.com", capital_required: 12_000, password: 'chicken'
+
+u5 = User.create username: 'linna', dob: "1993/12/12", job_title:"linna", email: "linna@gmail.com", capital_required: 12_000, password: 'chicken'
+
+u6 = User.create username: 'tom1', dob: "1993/13/12", job_title:"tom@gmail.com", email: "tom@gmail.com", capital_required: 12_000,  password: 'chicken'
+
+
 puts "Created #{User.all.length} users."
 
 
@@ -43,6 +50,15 @@ i2 = Idea.create idea_title: 'New App Design', idea_description: 'You are able t
 
 
 i3 = Idea.create idea_title: 'More ideas', idea_description: 'You are able to create an app where....'
+
+i4 = Idea.create idea_title: ' entrepreneurs', idea_description: 'enting on their ideas.'
+
+i5 = Idea.create idea_title: 'App Design', idea_description: 'You are ablwhere....'
+
+
+i6 = Idea.create idea_title: 'More ', idea_description: 'You are able to create a...'
+
+
 
 
 puts "Created #{Idea.all.length} Ideas."
