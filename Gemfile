@@ -61,3 +61,4 @@ gem 'pry-rails'
 gem 'pry-byebug'
 gem 'jquery-rails'
 gem 'cloudinary'
+gem 'rails_12factor', group: :production
