@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create({body: params[:body]})
     @comment.user_id = @current_user.id
+
     @comment.save
 
     if @comment.persisted?
@@ -15,6 +16,7 @@ class CommentsController < ApplicationController
   end
 
   def new
+
   end
 
   def destroy

@@ -1,5 +1,4 @@
 
-<hr>
 <% if @current_user.present? && @idea.user == @current_user %>|
 
   <%= link_to 'Edit Your idea',edit_idea_path  %> |
@@ -10,7 +9,9 @@
 
 <hr>
 <br>
-<h2>Startup Ideas by @username </h2>
+<h2><%= @idea.idea_title %> by</h2>
+  <h2><%= @idea.user.username %></h2>
+
 
 
  <h5>Title: </h5><%= @idea.idea_title %> <br>
@@ -19,21 +20,30 @@
 
 
 
+
+<h3>Comments:</h3>
+
+<% @idea.comments.each do |comment| %>
+
+<span class ="userC"> <%= comment.user.username %></span> <br>
+  <%= comment.body %>
 <hr>
 
-<h3>Comment Section:</h3>
-</ul>
-<% @idea.comments.each do |comment| %>
-  <li><%= comment.body %></li>
-</ul>
 <% end %>
+
 <br>
 <br>
-<%= form_tag comments_path do  %>
-    <%= label_tag :body %>
-    <%= text_field_tag :body %>
+
+
+
+<% if @current_user.present?%>
+  <%= form_tag comments_path do  %>
+    <%= label_tag :Comment %>
+    <div class="comment"><%= text_field_tag :body %></div>
     <%= hidden_field_tag :idea_id,"#{@idea.id}" %>
     <br>
 
-    <%= submit_tag "submit"%>
+    <%= submit_tag "Post comment"%>
+  <% end  %>
+
   <% end %>

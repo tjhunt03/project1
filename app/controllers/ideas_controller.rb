@@ -5,6 +5,8 @@ class IdeasController < ApplicationController
 
     def show
       @idea = Idea.find params[:id]
+      console
+
     end
 
     def index
@@ -32,8 +34,7 @@ class IdeasController < ApplicationController
     def create
 
       @ideas = Idea.new (idea_params)
-
-      @ideas.user = @current_user
+      @ideas.user_id = @current_user.id
 
       @ideas.save
         if @ideas.persisted?

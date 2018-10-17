@@ -61,3 +61,17 @@ body {
 .floatlogin {
   float: right;
 }
+
+
+#body {
+  height: 120px;
+  width: 50%;
+}
+
+.userC{
+  color: blue;
+}
+
+.commentli {
+  list-style-type: none;
+}
