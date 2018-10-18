@@ -1,5 +1,5 @@
 
-    <h4 class ="createacc">Create New Account</h4> 
+    <h4 class ="createacc">Create New Account</h4>
 
   <%if flash[:errors].present? %>
   <strong>Please correct the following errors</strong>
@@ -11,7 +11,7 @@
 <% end %>
     <%= form_for @user do |f| %>
 
-    <div class = "jumbotron">
+    <div class = "jumbotron jumbotron-signup">
     <div class = "form-signup">
     <%= f.label :username %>
     <br>

@@ -146,3 +146,13 @@ color: white;
   text-align: center;
 
 }
+
+.jumbotron-signup{
+  width: 800px;
+  margin:0 auto;
+}
+
+.jumbotron-login{
+  width: 800px;
+  margin: 0 auto;
+}
