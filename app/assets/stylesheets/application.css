@@ -23,7 +23,9 @@
 
 
 
-
+.col-12 {
+  text-align: right;
+}
 
 .col-4 {
   text-align: right;
@@ -68,7 +70,7 @@ color:white;
 }
 
 .login {
-color: black;
+color: white;
 /* float: right; */
 }
 
@@ -78,16 +80,10 @@ color: white;
 }
 
 .signup{
-  color:black;
+  color:white;
   /* float: right; */
 }
 
-.welcome {
-
-  /* flsoat: right; */
-
-
-}
 
 #frontTitle{
   text-align: center;

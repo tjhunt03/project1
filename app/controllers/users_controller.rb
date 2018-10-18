@@ -1,5 +1,20 @@
 class UsersController < ApplicationController
 
+  def add_like
+    # raise 'hell'
+    idea = Idea.find params[:id]
+    @current_user.liked_ideas << idea
+    redirect_to idea_path(idea)
+  end
+
+  def remove_like
+
+    idea = Idea.find params[:id]
+    @current_user.liked_ideas.delete(idea)
+    redirect_to idea_path(idea)
+
+  end
+
   def new
     @user = User.new
   end

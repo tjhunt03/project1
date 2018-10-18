@@ -69,9 +69,9 @@ puts "Created #{Idea.all.length} Ideas."
 #xbiz1 belongs to social network
 # i1.users << u1
 
-u5.ideas << i3 << i4 << i5
+u1.ideas << i3 << i4 << i5
 
-u6.ideas << i6
+u2.ideas << i6 << i1 << i2
 
 
 u1.liked_ideas << i1 << i5 << i6

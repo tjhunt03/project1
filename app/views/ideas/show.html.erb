@@ -1,16 +1,21 @@
 
 <% if @current_user.present? && @idea.user == @current_user %>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button type="button" class="btn btn-secondary"><%= link_to 'Edit Your idea',edit_idea_path  %></button>
 
-  <button type="button" class="btn btn-secondary">  <%= link_to 'Create New idea', new_idea_path  %>
-</button>
-<button type="button" class="btn btn-secondary">  <%= link_to 'Delete this Idea', idea_path(@idea), method: 'delete', class: "but"%>
-</button>
+
+
+  <%= link_to 'Edit Your idea',edit_idea_path  %> |
+
+ <%= link_to 'Create New idea', new_idea_path  %> |
+
+  <%= link_to 'Delete this Idea', idea_path(@idea), method: 'delete', class: "but"%>
+
 
 </nav>
 <% end %>
+
+
+
 
 <hr>
 <br>
@@ -22,7 +27,21 @@
  <h5>Title: </h5><%= @idea.idea_title %> <br><br>
 
 <h5>Description:  </h3><%= @idea.idea_description %>
+
+
+<% if @current_user.present? %>
+
+  <% if @current_user.liked_ideas.include?(@idea) %>
+    <%= button_to 'Unlike', unlike_path(@idea.id) %>
+  <% else %>
+    <%= button_to 'Like', like_path(@idea.id) %>
+  <% end  %>
+
+  <% end %>
+
 </div>
+
+
 
 <br><br><hr>
 
@@ -31,6 +50,7 @@
 <% @idea.comments.each do |comment| %>
 
 <div class ="jumbotron" > <h6 class= "username"><%= comment.user.username %> says:</h6>
+  <%= comment.created_at %>
   <%= simple_format(comment.body) %>
 </div>
 
