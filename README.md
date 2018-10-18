@@ -1,24 +1,26 @@
-# README
+# PROJECT ONE - :
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Follow my link and sign up to the Idea Network:
+https://theideanetwork.herokuapp.com/ideas
 
-Things you may want to cover:
+## Description:
 
-* Ruby version
+The main objective of this project was designed to test create our first full stack application using Ruby on Rails.
 
-* System dependencies
+The 'Idea Network' is a database of startup ideas where people are able to create their own startup ideas and receive feedback from other users.
 
-* Configuration
 
-* Database creation
+## FEATURES:
+  * Sign up/Login functionality with encrypted passwords and authorisation flow.
+  * Includes complete RESTful routes
+  * Semantically clean HTML
+  * Is deployed using Heroku.
 
-* Database initialization
+## TECH:
+* Ruby on Rails
+* HTML
+* CSS
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##V2 Release Notes
+* Create a user profile list with liked ideas.
+* Add a search bar
