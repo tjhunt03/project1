@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
@@ -25,27 +26,44 @@
 
   <!-- <h4><%=link_to 'Browse Startup ideas', ideas_path %></h4> | -->
   <!-- <h4><%= link_to 'Create New Idea', ideas_path %> </h4>  |------------------------------------------------------------------------------------------------ -->
-  <body class ="container-fluid">
-
-  <nav>
-
-  <p><%=link_to 'Browse Startup ideas', ideas_path %></p>
 
 
-<%if @current_user.present? %>
-Welcome, <%= @current_user.username %>
-|
-
-<span class ="floatr"><strong>  <%= link_to 'Logout', login_path, method: 'delete'  %> </span></strong>
-  |
-<strong>  <%= link_to 'Your profile', user_path(@current_user) %> </strong>
-<% else %>
-  -----<span class = "floatlogin"><%= link_to 'login', login_path %>
-<%= link_to 'signup', new_user_path %>
-<% end %></span>
-</nav>
 
 
-    <%= yield %>
-  </body>
+<body class ="container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="row">
+        <div class="col col-8">
+          <%=link_to 'Browse Startup ideas', ideas_path, class: "browse" %>
+        </div>
+        <%if @current_user.present? %>
+        <div class="col col-4">
+         <%= link_to 'Logout', login_path, method: 'delete', class: "logout"  %>
+
+          <%= link_to 'profile', user_path(@current_user), class: "profile" %>
+        </div>
+      <div class="row">
+        <div class="col col-12">
+          <div class = "welcome">
+            &nbsp;&nbsp;&nbsp;Welcome back, <%= @current_user.username %>
+          </div>
+        </div>
+      </div>
+      <% else %>
+      <div class="col col-12">
+        <%= link_to 'login', login_path,  class: "login" %>
+        <%= link_to 'signup', new_user_path, class: "signup" %>
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <%= yield %>
+
+
+
+</body>
 </html>

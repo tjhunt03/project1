@@ -27,7 +27,7 @@ User.destroy_all
 
 u1 = User.create username: 'xbiz1', dob: "1993/12/12", job_title:"xbiz@gmail.com", email: "xbiz@gmail.com", capital_required: 12_000, password: 'chicken'
 
-u2 = User.create username: 'place_kitten123', dob: "1993/12/12", job_title:"xbiz@gmail.com", email: "xbiz@gmail.com", capital_required: 12_000, password: 'chicken'
+u2 = User.create username: 'place_kitten123', dob: "1993/12/12", job_title:"xbiz@gmail.com", email: "xbiz2@gmail.com", capital_required: 12_000, password: 'chicken'
 
 u3 = User.create username: 'Fillmurray995', dob: "1993/13/12", job_title:"xbiz@gmail.com", email: "chicken@gmail.com", capital_required: 12_000,  password: 'chicken'
 
@@ -69,9 +69,13 @@ puts "Created #{Idea.all.length} Ideas."
 #xbiz1 belongs to social network
 # i1.users << u1
 
-u1.ideas << i1 << i2
+u5.ideas << i3 << i4 << i5
 
-u2.ideas << i3
+u6.ideas << i6
+
+
+u1.liked_ideas << i1 << i5 << i6
+u2.liked_ideas << i1 << i2 << i6
 
 #placekitten belongs to App Idea
 # i2.users << u2

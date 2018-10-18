@@ -9,16 +9,19 @@
   <% end %>
 
 
+
   <%= form_for @ideas do |f| %>
-      <%= f.label :idea_title %>
-      <%= f.text_field :idea_title %>
+
+      <%= f.label :idea_title %>:<br>
+
+      <%= f.text_field :idea_title, class: "form-control" %>  <br>
       <br>
-      <%= f.label :idea_description %>
-      <%= f.text_field :idea_description %>
+      <%= f.label :idea_description %>: <br>
+      <%= f.text_field :idea_description, class: "form-control" %>
       <br>
       <!-- <%= f.label :user_id %>
       <%= f.collection_select :user_id, User.all, :id, :username, prompt: "Select user" %> -->
       <br>
       <br>
-      <%= f.submit %>
+          <%= f.submit class: "btn btn-primary btn-lg"  %>
     <% end %>

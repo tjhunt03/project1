@@ -1,4 +1,10 @@
-<h1>Login</h1>
+
+<br>
+
+
+<h1 class = "loginP">Login</h1>
+
+<hr>
 
 <!-- if flash is truthy print out -->
 <% if flash[:error] %>
@@ -7,14 +13,22 @@
 <br><br>
 <% end %>
 
-<%= form_tag login_path do %>
+<!-- start of bootstrap -->
 
-<%= label_tag :email %>
-<%= email_field_tag :email, nil  %>
-<br>
-<%= label_tag :password %>
-<%= password_field_tag :password, nil  %>
-<br>
-<%= submit_tag 'Login' %>
+<div class = "jumbotron">
+<div class="form-group">
 
-<% end %>
+  <%= form_tag login_path do %>
+  <!-- start of bootstrap -->
+  <%= label_tag :email %>
+
+  <%= email_field_tag :email,  nil, class: "form-control"  %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password, nil, class: "form-control"  %>
+
+  <!-- end of bootstrap -->
+
+  <%= submit_tag 'Sign in', class: "btn btn-primary btn-lg"  %>
+  <% end %>
+</div>
+</div>

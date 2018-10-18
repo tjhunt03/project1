@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if user.persisted?
       #acc created successfully
       session[:user_id] = user.id #log in the new user!
-      redirect_to idea_path
+      redirect_to ideas_path
       # (username)  #go to the show page for this user
     else
       # Acc not created: show error

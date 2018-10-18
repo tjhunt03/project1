@@ -15,46 +15,25 @@
  */
 
 
-h2 {
-  color: white;
-  text-align: center;
+
+
+
+
+
+
+
+
+
+
+.col-4 {
+  text-align: right;
 }
 
-a {
-  color: white;
-  text-align: center;
-}
-
-ul {
-  text-align: center;
-  list-style-type: none;
-}
-
-h3 {
-  color: white;
-  text-align: center;
-}
-
-h4 {
-  color: white;
-  display: inline;
-}
-
-h5 {
-  display: inline;
-  color: white;
-
+.row {
+  width: 100%;
 }
 
 
-
-.floatr {
-  float: right;
-}
-
-.floatlogin {
-  float: right;
-}
 
 
 #body {
@@ -68,4 +47,106 @@ h5 {
 
 .commentli {
   list-style-type: none;
+}
+
+.navbar .navbar-expand-lg .navbar-light .bg-light{
+width: 100%;
+}
+
+
+
+
+.browse {
+  color: white;
+  /* float: right; */
+}
+
+.logout{
+color:white;
+/* margin-left: 60vw; */
+
+}
+
+.login {
+color: black;
+/* float: right; */
+}
+
+.profile{
+color: white;
+/* float: right; */
+}
+
+.signup{
+  color:black;
+  /* float: right; */
+}
+
+.welcome {
+
+  /* flsoat: right; */
+
+
+}
+
+#frontTitle{
+  text-align: center;
+}
+
+
+.list {
+  text-align: center;
+  list-style-type: none;
+}
+
+.showtitle {
+  text-align: center;
+}
+
+.username {
+  /* display: inline; */
+}
+
+.userP{
+  text-align: center !important;
+  margin-top: 2%;
+}
+
+.youridea {
+  list-style-type: none;
+  text-align: center;
+}
+
+#idea_idea_title {
+  height: 70% !important;
+}
+
+
+.createacc {
+  text-align: center;
+
+}
+
+
+.form-group {
+  width: 25vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 2vw;
+}
+
+.loginP {
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.form-signup {
+  width: 25vw;
+  margin: 0 auto;
+  text-align: center;
+
 }

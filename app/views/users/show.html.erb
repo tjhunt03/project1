@@ -1,28 +1,28 @@
-<h2>USER PROFILE</h2>
 
 
 
-<hr>
-
-<h4>VIEW IDEA'S:</h4>
 
 
-<p><strong>Information about users idea:</strong>
+<h4 class="userP">USER PROFILE IDEA'S:</h4>
+
+<div class = "jumbotron">
+
+<!-- <p><strong>Information about users idea:</strong>
   <%=@user.username %>
 </p>
 
 <p><strong>Required capital: $</strong>
 <%= @user.capital_required %>
 </p>
+<h3>Title</h3> -->
 
-
-<ul>
+<ul class ="youridea">
   <% @user.ideas.each do |idea| %>
-  <li>
   <br>
 
+  <li class ="youridea">
 
-  <h3>Title</h3>
+
   <!-- <%= link_to idea.idea_title  %> -->
 
 <a href="<%= idea_path(idea.id) %>">
@@ -32,5 +32,7 @@
 
 
   </a>
+
   <% end %>
 </ul>
+</div>
