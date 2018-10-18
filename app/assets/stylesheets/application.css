@@ -156,3 +156,21 @@ color: white;
   width: 800px;
   margin: 0 auto;
 }
+
+
+.form-controledit{
+  width: 800px;
+}
+
+
+.form-edit {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: left;
+
+}
+
+.jumbotron-edit{
+  width: 1000px;
+  margin:0 auto;
+}

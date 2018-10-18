@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+
   get 'ideas_users/create'
   get 'ideas_users/destroy'
   get 'create/destroy'

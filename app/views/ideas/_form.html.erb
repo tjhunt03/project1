@@ -9,15 +9,17 @@
   <% end %>
 
 
-
   <%= form_for @ideas do |f| %>
 
-      <%= f.label :idea_title %>:<br>
+  <div class = "form-edit">
 
-      <%= f.text_field :idea_title, class: "form-control" %>  <br>
+      <strong><%= f.label :idea_title %>:</strong><br>
+
+    <%= f.text_area :idea_title, class: "form-control" %>  <br>
       <br>
-      <%= f.label :idea_description %>: <br>
-      <%= f.text_field :idea_description, class: "form-control" %>
+        <strong>
+      <%= f.label :idea_description %>: </strong> <br>
+      <%= f.text_area :idea_description, class: "form-control" %>
       <br>
       <!-- <%= f.label :user_id %>
       <%= f.collection_select :user_id, User.all, :id, :username, prompt: "Select user" %> -->
@@ -25,3 +27,5 @@
       <br>
           <%= f.submit class: "btn btn-primary btn-lg"  %>
     <% end %>
+
+    </div>
